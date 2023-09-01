@@ -1,9 +1,17 @@
 import streamlit as st
+import mysql.connector
 
 st.set_page_config(page_title="Memorando")
 
 def inserir():
-  pass
+  conexao = mysql.connector.connect(
+        host='localhost',
+        user='root',
+        password='Lula#2022',
+        database='new_schema',
+    )
+    cursor = conexao.cursor()
+  
   
 st.header("BUSQUE O NUMERO PARA O SEU MEMORANDO")
 

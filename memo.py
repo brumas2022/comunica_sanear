@@ -11,11 +11,11 @@ def inserir():
         database='new_schema'
     )
     
-  cursor = conexao.cursor()
-  comando = f'SELECT * FROM memorando ORDER BY idmemorando DESC'
-  cursor.execute(comando)
-  resultado = cursor.fetchone()
-  st.write(resultado)
+      cursor = conexao.cursor()
+      comando = f'SELECT * FROM memorando ORDER BY idmemorando DESC'
+      cursor.execute(comando)
+      resultado = cursor.fetchone()
+      st.write(resultado)
   
 st.header("BUSQUE O NUMERO PARA O SEU MEMORANDO")
 

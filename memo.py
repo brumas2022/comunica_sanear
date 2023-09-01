@@ -8,7 +8,7 @@ def inserir():
         host='localhost',
         user='root',
         password='Lula#2022',
-        database='new_schema',
+        database='new_schema'
     )
     cursor = conexao.cursor()
     comando = f'SELECT * FROM memorando ORDER BY idmemorando DESC'

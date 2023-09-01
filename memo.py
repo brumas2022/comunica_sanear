@@ -4,6 +4,8 @@ st.set_page_config(page_title="Memorando")
 
 def inserir():
   pass
+  
+st.header("BUSQUE O NUMERO PARA O SEU MEMORANDO")
 
 a1 = st.selectbox("SELECIONE O ASSUNTO DO MEMORANDO", ("AQUISICAO DE MATERIAIS/SERVIÇOS", "ORDEM DE SERVIÇO", "AUTORIZAÇÃO DE FORNECIMENTO", "ABERTURA DE PROCESSO LICITATORIO"))
 

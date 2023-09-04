@@ -39,7 +39,7 @@ elif a1=="AUTORIZAÇÃO DE FORNECIMENTO":
           ##print(resultado)
           ##print(entrada + " acessou o bot")
           ##grava(mensagem)
-  except Exception as ex
+  except Exception as ex:
           st.write(ex)
 
 st.header(a0)

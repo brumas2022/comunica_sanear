@@ -27,7 +27,7 @@ elif a1=="AUTORIZAÇÃO DE FORNECIMENTO":
                password='Gh2T6ioe2h2b7UD4',
                database='postgres',
                port='5432'
-          )
+     )
       st.write("conexao exitosa")
           ##cursor = connection.cursor()
 

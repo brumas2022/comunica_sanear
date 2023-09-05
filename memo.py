@@ -1,5 +1,5 @@
 import streamlit as st
-import psycopg2
+import psycopg
 
 
 
@@ -21,7 +21,7 @@ elif a1=="ORDEM DE SERVIÇO":
   st.image("https://lh3.googleusercontent.com/pw/AIL4fc8tQMTd5Q2JPnrFYRmx-E4ADpJ0W3rQ_BuCjxKX1vB5W3ZAdfosDpRitCEInj1YUSQSUxY1sTjMeckv5GaVDImj7FhEqFMxSZguHoueHduiGHoG06ETRi6Q044qNMpcQrnXQ6uT306ExgCPxF7Ie07AE6zuqZCKUIY74elzvaoR4Kz9NEYzxRXytLhrH9K4fmturJHiAAUfDJkTz6UfJCfsmewd7BwUPznlp-v1tBnGH0GljL6M3oz2iqlk8RqtI76afx621HkksO91blYWTS8SpX-hrDolzTPhuEQ3YtX_D4RmudAca-o3nTOmKba_-SHeuDQg7kKBwD6S2ipygrtkh_fft0kZLWosAzQg7mfHumkZuR7eEJFg6554Y0wzGwNQt7pChj2xojd4oycea2BKst64EoLmgDV1PLwd2mrWpuyeH19Evk7Q0Lk_jCYL9sZQ_8heHxMMRCFn49wc_0dHzXIOsfniP3r4SSCHiGH7Qmzdi7c8qVoydTyOAnyycA2aBHy1DYakrYkvi5Rb0GloCFdujnuEApNdx5dPkHIiwh4pmeH0j2dGfGLtIvJojxM9n3q3v2-Zggpc5q85EJDy4j_CWes5b6XkMCVoJlR5T2ypclEUS-sI5tO70UIxg-TXGrnkTtoGlluF6ZkYB16Vzn97BDq8uSznjKplU2d5dxhRVlca1ac5wzyxZqQVZkt6U30MJVw6ZOS4Wn2BV5caWi1UDTVZrQ7t1JtU3Fb2UhBWrYNhHkNNrLoJ_o7UipE70_WeUZwun6Pm3rcUVqPyuXacBQQzfbnRXCSe5BjFXCJffjrV_UXS-8zm68gIqRa25vR_sUI2Mm9rdwxFX_vb45nmQIho_t8MhhuTV1nG47sXDc4pwGS6agJRxkzEw6QdTdPHwU0zrMc=w219-h463-s-no?authuser=0")
 elif a1=="AUTORIZAÇÃO DE FORNECIMENTO":
   try:
-     connection = psycopg2.connect(
+     connection = psycopg.connect(
                host='db.hdhvkseneldllvnlvpgc.supabase.co',
                user='postgres',
                password='Gh2T6ioe2h2b7UD4',

@@ -1,5 +1,5 @@
 import streamlit as st
-import psycopg
+import psycopg2
 
 
 

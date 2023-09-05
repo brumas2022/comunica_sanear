@@ -28,7 +28,7 @@ elif a1=="AUTORIZAÇÃO DE FORNECIMENTO":
                database='postgres',
                port='5432'
      )
-      st.write("conexao exitosa")
+     st.write("conexao exitosa")
           ##cursor = connection.cursor()
 
 

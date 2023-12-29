@@ -13,6 +13,9 @@ st.header("ACESSE UM NUMERO DE MEMORANDO")
 
 with st.form(key="novo_memorando"):
   a0 = st.text_input("DIGITE SEU NOME COMPLETO")
+  setor = st.radio("Selecione a diretoria :", ("GERAL", "ADMINISTRATIVA", "TECNICA", "MANUTENCAO", "JURIDICO"))
+  if setor =="GERAL":
+      st.write("foi escolhida a GERAL")
 
   a1 = st.selectbox("SELECIONE O ASSUNTO DO MEMORANDO", ("AQUISICAO", "ORDEM DE SERVIÇO", "AUTORIZAÇÃO DE FORNECIMENTO", "ABERTURA DE PROCESSO LICITATORIO"))
 

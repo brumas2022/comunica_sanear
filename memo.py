@@ -13,8 +13,8 @@ st.header("ACESSE UM NUMERO DE MEMORANDO")
 
 with st.form(key="novo_memorando"):
   a0 = st.text_input("DIGITE SEU NOME COMPLETO")
-  setor = st.radio("Selecione a diretoria :", ("GERAL", "ADMINISTRATIVA", "TECNICA", "MANUTENCAO", "JURIDICO"))
-  if setor =="GERAL":
+  setor1 = st.radio("Selecione a diretoria :", ("GERAL", "ADMINISTRATIVA", "TECNICA", "MANUTENCAO", "JURIDICO"))
+  if setor1 =="GERAL":
       st.write("foi escolhida a DIRETORIA GERAL")
 
   a1 = st.selectbox("SELECIONE O ASSUNTO DO MEMORANDO", ("AQUISICAO", "ORDEM DE SERVIÇO", "AUTORIZAÇÃO DE FORNECIMENTO", "ABERTURA DE PROCESSO LICITATORIO"))
@@ -33,7 +33,7 @@ with st.form(key="novo_memorando"):
           cursor = connection.cursor()
      
 
-          comando = f"""INSERT INTO nmemo(nome, assunto) VALUES ('{a0}','{a1}')"""
+          comando = f"""INSERT INTO nmemo(nome, assunto, setor) VALUES ('{a0}','{a1}','{setor1}')"""
           cursor.execute(comando)
           connection.commit()
 

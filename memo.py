@@ -42,9 +42,9 @@ with st.form(key="novo_memorando"):
           cursor.execute(comando)
           resultado = cursor.fetchone()
 
-          st.markdown("yhSr. "+resultado[1])
-          st.write(str(resultado[1]))
-          st.write("Por favor, anote o numero do memorando :  ")
+          st.markdown("Sr. "+resultado[1])
+          
+          st.markdown("Por favor, anote o numero do memorando :  ")
           
           st.title(str(resultado[0]))
           ##print(entrada + " acessou o bot")

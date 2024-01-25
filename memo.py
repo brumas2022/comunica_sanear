@@ -14,8 +14,7 @@ st.header("ACESSE UM NUMERO DE MEMORANDO")
 with st.form(key="novo_memorando"):
   a0 = st.text_input("DIGITE SEU NOME COMPLETO")
   setor1 = st.radio("Selecione a diretoria :", ("GERAL", "ADMINISTRATIVA", "TECNICA", "MANUTENCAO", "JURIDICO"))
-  if setor1 =="GERAL":
-      st.write("foi escolhida a DIRETORIA GERAL")
+  
 
   a1 = st.selectbox("SELECIONE O ASSUNTO DO MEMORANDO", ("AQUISICAO", "ORDEM DE SERVIÇO", "AUTORIZAÇÃO DE FORNECIMENTO", "ABERTURA DE PROCESSO LICITATORIO"))
 
@@ -42,9 +41,11 @@ with st.form(key="novo_memorando"):
 
           cursor.execute(comando)
           resultado = cursor.fetchone()
-          
+
+          st.markdown("Sr. "+resultado[1])
           st.write(str(resultado[1]))
-          st.write("Anote o numero do memorando :  ")
+          st.write("Por favor, anote o numero do memorando :  ")
+          
           st.title(str(resultado[0]))
           ##print(entrada + " acessou o bot")
           ##grava(mensagem)

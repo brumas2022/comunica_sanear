@@ -42,7 +42,7 @@ with st.form(key="novo_memorando"):
           cursor.execute(comando)
           resultado = cursor.fetchone()
 
-          st.markdown("Sr. "+resultado[1])
+          st.markdown("yhSr. "+resultado[1])
           st.write(str(resultado[1]))
           st.write("Por favor, anote o numero do memorando :  ")
           

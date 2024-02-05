@@ -47,7 +47,7 @@ with st.form(key="novo_memorando"):
              cursor.execute(comando1)
              resultado = cursor.fetchone()
 
-         elif setor1=="TECNICA":
+          elif setor1=="TECNICA":
              comando = f"""INSERT INTO nmemodirtec(nome_servidor, assunto) VALUES ('{a0}','{a1}')"""
              cursor.execute(comando)
              connection.commit()

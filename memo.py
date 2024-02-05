@@ -55,6 +55,15 @@ with st.form(key="novo_memorando"):
              cursor.execute(comando1)
              resultado = cursor.fetchone()
 
+          elif setor1=="MANUTENCAO":
+             comando = f"""INSERT INTO nmemodirman(nome_servidor, assunto) VALUES ('{a0}','{a1}')"""
+             cursor.execute(comando)
+             connection.commit()
+             comando1 = """SELECT id, nome_servidor FROM nmemodirman ORDER BY id DESC""" 
+             cursor.execute(comando1)
+             resultado = cursor.fetchone()
+        
+
           ##comando = """SELECT id, nome_servidor FROM nmemodirgeral ORDER BY id DESC"""
           ##cursor.execute(comando)
           ##resultado = cursor.fetchone()

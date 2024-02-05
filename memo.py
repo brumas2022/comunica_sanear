@@ -3,7 +3,7 @@ import psycopg2
 
 
 
-st.set_page_config(page_title="Memorando")
+st.set_page_config(page_title="Memorando ALTERADO")
 
 def inserir():
   pass

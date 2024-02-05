@@ -31,13 +31,17 @@ with st.form(key="novo_memorando"):
           ## st.write("conexao exitosa")
           cursor = connection.cursor()
      
+          if setor1=="GERAL":
+             comando = f"""INSERT INTO nmemodirgeral(nome_servidor, assunto) VALUES ('{a0}','{a1}')"""
+             cursor.execute(comando)
+             connection.commit()
+          elif setor1=="ADMINISTRATIVA":
+             comando = f"""INSERT INTO nmemo(nome, assunto, setor) VALUES ('{a0}','{a1}','{setor1}')"""
+             cursor.execute(comando)
+             connection.commit()
 
-          comando = f"""INSERT INTO nmemo(nome, assunto, setor) VALUES ('{a0}','{a1}','{setor1}')"""
-          cursor.execute(comando)
-          connection.commit()
 
-
-          comando = """SELECT id, nome FROM nmemo ORDER BY id DESC"""
+          comando = """SELECT id, nome_servidor FROM nmemodirgeral ORDER BY id DESC"""
 
           cursor.execute(comando)
           resultado = cursor.fetchone()

@@ -35,16 +35,21 @@ with st.form(key="novo_memorando"):
              comando = f"""INSERT INTO nmemodirgeral(nome_servidor, assunto) VALUES ('{a0}','{a1}')"""
              cursor.execute(comando)
              connection.commit()
+             comando1 = """SELECT id, nome_servidor FROM nmemodirgeral ORDER BY id DESC""" 
+             cursor.execute(comando1)
+             resultado = cursor.fetchone()
+            
           elif setor1=="ADMINISTRATIVA":
-             comando = f"""INSERT INTO nmemo(nome, assunto, setor) VALUES ('{a0}','{a1}','{setor1}')"""
+             comando = f"""INSERT INTO nmemodiradm(nome, assunto, setor) VALUES ('{a0}','{a1}','{setor1}')"""
              cursor.execute(comando)
              connection.commit()
+             comando1 = """SELECT id, nome_servidor FROM nmemodiradm ORDER BY id DESC""" 
+             cursor.execute(comando1)
+             resultado = cursor.fetchone()
 
-
-          comando = """SELECT id, nome_servidor FROM nmemodirgeral ORDER BY id DESC"""
-
-          cursor.execute(comando)
-          resultado = cursor.fetchone()
+          ##comando = """SELECT id, nome_servidor FROM nmemodirgeral ORDER BY id DESC"""
+          ##cursor.execute(comando)
+          ##resultado = cursor.fetchone()
 
           st.markdown("Sr. "+resultado[1])
           

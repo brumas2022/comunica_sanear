@@ -22,11 +22,18 @@ with st.form(key="novo_memorando"):
   if enviar:
       try:
           connection = psycopg2.connect(
-               host='db.hdhvkseneldllvnlvpgc.supabase.co',
-               user='postgres',
+               host='aws-0-sa-east-1.pooler.supabase.com',
+               user='postgres.hdhvkseneldllvnlvpgc',
                password='Hoje#estamos#fortes#como#geleia',
                database='postgres',
                port='5432'
+
+            
+               #host='db.hdhvkseneldllvnlvpgc.supabase.co',
+               #user='postgres',
+               #password='Hoje#estamos#fortes#como#geleia',
+               #database='postgres',
+               #port='5432'
           )
           ## st.write("conexao exitosa")
           cursor = connection.cursor()

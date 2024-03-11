@@ -9,7 +9,7 @@ def inserir():
   pass
 
 ##st.image("https://static.preparaenem.com/2023/05/ilustracao-de-uma-folha-de-papel-escrita-como-representacao-do-memorando.jpg")  
-st.image("https://github.com/brumas2022/comunica_sanear/blob/main/blog-aplex-seguranca-documentos-imagens.jpeg")
+st.image("blog-aplex-seguranca-documentos-imagens.jpeg")
 st.header("ACESSE UM NUMERO DE MEMORANDO")
 
 with st.form(key="novo_memorando"):

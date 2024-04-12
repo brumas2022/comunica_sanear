@@ -1,6 +1,6 @@
 import streamlit as st
 import psycopg2
-import pandas
+import pandas as pd
 
 st.set_page_config(page_title="Memorando ALTERADO", layout="wide")
 

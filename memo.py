@@ -14,10 +14,11 @@ st.header("ACESSE UM NUMERO DE MEMORANDO")
 
 with st.form(key="novo_memorando"):
   a0 = st.text_input("DIGITE SEU NOME COMPLETO")
-  setor1 = st.radio("Selecione a diretoria :", ("GERAL", "ADMINISTRATIVA", "TECNICA", "MANUTENCAO", "JURIDICO"))
-  
+  setor1 = st.sidebar.radio("Selecione a diretoria :", ("GERAL", "ADMINISTRATIVA", "TECNICA", "MANUTENCAO", "JURIDICO"))
 
-  a1 = st.selectbox("SELECIONE O ASSUNTO DO MEMORANDO", ("AQUISICAO", "ORDEM DE SERVIÇO", "AUTORIZAÇÃO DE FORNECIMENTO", "ABERTURA DE PROCESSO LICITATORIO"))
+  a0 = st.text_input("DIGITE SEU NOME COMPLETO")
+
+  a1 = st.radio("SELECIONE O ASSUNTO DO MEMORANDO", ("AQUISICAO", "ORDEM DE SERVIÇO", "AUTORIZAÇÃO DE FORNECIMENTO", "ABERTURA DE PROCESSO LICITATORIO", "OUTROS"))
 
   enviar = st.form_submit_button("CONFIRME")
   if enviar:

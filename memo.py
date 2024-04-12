@@ -1,5 +1,6 @@
 import streamlit as st
 import psycopg2
+import pandas
 
 st.set_page_config(page_title="Memorando ALTERADO", layout="wide")
 
@@ -82,8 +83,8 @@ with st.form(key="novo_memorando"):
           st.markdown("Por favor, anote o numero do memorando :  ")
           
           st.title(str(resultado[0]))
-
-          st.write(resposta)
+          df = pd.DataFrame(resposta)
+          st.dataframe(df)
           ##print(entrada + " acessou o bot")
           ##grava(mensagem)
       except Exception as ex:

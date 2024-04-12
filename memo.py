@@ -1,15 +1,13 @@
 import streamlit as st
 import psycopg2
 
-
-
 st.set_page_config(page_title="Memorando ALTERADO")
 
 def inserir():
   pass
 
 ##st.image("https://static.preparaenem.com/2023/05/ilustracao-de-uma-folha-de-papel-escrita-como-representacao-do-memorando.jpg")  
-st.image("blog-aplex-seguranca-documentos-imagens.jpeg", width=300)
+st.sidebar.image("blog-aplex-seguranca-documentos-imagens.jpeg", width=300)
 st.header("ACESSE UM NUMERO DE MEMORANDO")
 
 with st.form(key="novo_memorando"):

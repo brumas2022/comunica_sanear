@@ -69,6 +69,7 @@ with st.form(key="novo_memorando"):
              comando1 = """SELECT id, nome_servidor FROM nmemodirman ORDER BY id DESC""" 
              cursor.execute(comando1)
              resposta = cursor.fetchall()
+             cursor.execute(comando1)
              resultado = cursor.fetchone()
         
 

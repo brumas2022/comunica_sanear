@@ -1,7 +1,7 @@
 import streamlit as st
 import psycopg2
 
-st.set_page_config(page_title="Memorando ALTERADO")
+st.set_page_config(page_title="Memorando ALTERADO", layout="wide")
 
 def inserir():
   pass

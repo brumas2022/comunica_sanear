@@ -13,7 +13,7 @@ st.image("blog-aplex-seguranca-documentos-imagens.jpeg")
 st.header("ACESSE UM NUMERO DE MEMORANDO")
 
 with st.form(key="novo_memorando"):
-  a0 = st.text_input("DIGITE SEU NOME COMPLETO")
+  
   setor1 = st.sidebar.radio("Selecione a diretoria :", ("GERAL", "ADMINISTRATIVA", "TECNICA", "MANUTENCAO", "JURIDICO"))
 
   a0 = st.text_input("DIGITE SEU NOME COMPLETO")

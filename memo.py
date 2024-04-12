@@ -14,9 +14,9 @@ with st.form(key="novo_memorando"):
   
   setor1 = st.sidebar.radio("Selecione a diretoria :", ("GERAL", "ADMINISTRATIVA", "TECNICA", "MANUTENCAO", "JURIDICO"))
 
-  a0 = st.text_input("DIGITE SEU NOME COMPLETO")
+  a1 = st.sidebar.radio("SELECIONE O ASSUNTO DO MEMORANDO", ("AQUISICAO", "ORDEM DE SERVIÇO", "AUTORIZAÇÃO DE FORNECIMENTO", "ABERTURA DE PROCESSO LICITATORIO", "OUTROS"))
 
-  a1 = st.radio("SELECIONE O ASSUNTO DO MEMORANDO", ("AQUISICAO", "ORDEM DE SERVIÇO", "AUTORIZAÇÃO DE FORNECIMENTO", "ABERTURA DE PROCESSO LICITATORIO", "OUTROS"))
+  a0 = st.text_input("DIGITE SEU NOME COMPLETO")
 
   enviar = st.form_submit_button("CONFIRME")
   if enviar:

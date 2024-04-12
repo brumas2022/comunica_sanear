@@ -45,13 +45,17 @@ with st.form(key="novo_memorando"):
              connection.commit()
              comando1 = """SELECT id, nome_servidor FROM nmemodirgeral ORDER BY id DESC""" 
              cursor.execute(comando1)
+             resposta = cursor.fetchall()
+             cursor.execute(comando1)
              resultado = cursor.fetchone()
             
           elif setor1=="ADMINISTRATIVA":
              comando = f"""INSERT INTO nmemodiradm(nome_servidor, assunto) VALUES ('{a0}','{a1}')"""
              cursor.execute(comando)
              connection.commit()
-             comando1 = """SELECT id, nome_servidor FROM nmemodiradm ORDER BY id DESC""" 
+             comando1 = """SELECT id, nome_servidor FROM nmemodiradm ORDER BY id DESC"""
+             cursor.execute(comando1)
+             resposta = cursor.fetchall()
              cursor.execute(comando1)
              resultado = cursor.fetchone()
 
@@ -60,6 +64,8 @@ with st.form(key="novo_memorando"):
              cursor.execute(comando)
              connection.commit()
              comando1 = """SELECT id, nome_servidor FROM nmemodirtec ORDER BY id DESC""" 
+             cursor.execute(comando1)
+             resposta = cursor.fetchall()
              cursor.execute(comando1)
              resultado = cursor.fetchone()
 

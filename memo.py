@@ -68,6 +68,7 @@ with st.form(key="novo_memorando"):
              connection.commit()
              comando1 = """SELECT id, nome_servidor FROM nmemodirman ORDER BY id DESC""" 
              cursor.execute(comando1)
+             resposta = cursor.fetchall()
              resultado = cursor.fetchone()
         
 
@@ -80,6 +81,8 @@ with st.form(key="novo_memorando"):
           st.markdown("Por favor, anote o numero do memorando :  ")
           
           st.title(str(resultado[0]))
+
+          st.write(resposta)
           ##print(entrada + " acessou o bot")
           ##grava(mensagem)
       except Exception as ex:

@@ -89,7 +89,10 @@ with st.form(key="novo_memorando"):
           st.markdown("Por favor, anote o numero do memorando :  ")
           
           st.title(str(resultado[0]))
+
+          st.write("Veja quem solicitou os ultimos memorandos e o respectivo assunto")
           df = pd.DataFrame(resposta)
+        
           st.dataframe(df)
           ##print(entrada + " acessou o bot")
           ##grava(mensagem)

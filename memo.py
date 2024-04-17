@@ -43,7 +43,7 @@ with st.form(key="novo_memorando"):
              comando = f"""INSERT INTO nmemodirgeral(nome_servidor, assunto) VALUES ('{a0}','{a1}')"""
              cursor.execute(comando)
              connection.commit()
-             comando1 = """SELECT id, nome_servidor FROM nmemodirgeral ORDER BY id DESC""" 
+             comando1 = """SELECT id, nome_servidor, assunto FROM nmemodirgeral ORDER BY id DESC""" 
              cursor.execute(comando1)
              resposta = cursor.fetchall()
              cursor.execute(comando1)
@@ -53,7 +53,7 @@ with st.form(key="novo_memorando"):
              comando = f"""INSERT INTO nmemodiradm(nome_servidor, assunto) VALUES ('{a0}','{a1}')"""
              cursor.execute(comando)
              connection.commit()
-             comando1 = """SELECT id, nome_servidor FROM nmemodiradm ORDER BY id DESC"""
+             comando1 = """SELECT id, nome_servidor, assunto FROM nmemodiradm ORDER BY id DESC"""
              cursor.execute(comando1)
              resposta = cursor.fetchall()
              cursor.execute(comando1)
@@ -63,7 +63,7 @@ with st.form(key="novo_memorando"):
              comando = f"""INSERT INTO nmemodirtec(nome_servidor, assunto) VALUES ('{a0}','{a1}')"""
              cursor.execute(comando)
              connection.commit()
-             comando1 = """SELECT id, nome_servidor FROM nmemodirtec ORDER BY id DESC""" 
+             comando1 = """SELECT id, nome_servidor, assunto FROM nmemodirtec ORDER BY id DESC""" 
              cursor.execute(comando1)
              resposta = cursor.fetchall()
              cursor.execute(comando1)
@@ -73,7 +73,7 @@ with st.form(key="novo_memorando"):
              comando = f"""INSERT INTO nmemodirman(nome_servidor, assunto) VALUES ('{a0}','{a1}')"""
              cursor.execute(comando)
              connection.commit()
-             comando1 = """SELECT id, nome_servidor FROM nmemodirman ORDER BY id DESC""" 
+             comando1 = """SELECT id, nome_servidor, assunto FROM nmemodirman ORDER BY id DESC""" 
              cursor.execute(comando1)
              resposta = cursor.fetchall()
              cursor.execute(comando1)

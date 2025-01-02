@@ -13,9 +13,9 @@ st.header("ACESSE UM NUMERO DE MEMORANDO")
 
 with st.form(key="novo_memorando"):
   
-  setor1 = st.sidebar.radio("Selecione a diretoria :", ("GERAL", "ADMINISTRATIVA", "TECNICA", "MANUTENCAO", "JURIDICO"))
+  setor1 = st.sidebar.radio("Selecione a diretoria :", ("GERAL", "ALMOXARIFADO", "TECNICA", "MANUTENCAO", "JURIDICO"))
 
-  a1 = st.sidebar.radio("SELECIONE O ASSUNTO DO MEMORANDO", ("AQUISICAO", "ORDEM DE SERVIÇO", "AUTORIZAÇÃO DE FORNECIMENTO", "ABERTURA DE PROCESSO LICITATORIO", "OUTROS"))
+  a1 = st.text_input("QUAL O ASSUNTO DO MEMORANDO ?")
 
   a0 = st.text_input("DIGITE SEU NOME COMPLETO")
 
@@ -49,11 +49,11 @@ with st.form(key="novo_memorando"):
              cursor.execute(comando1)
              resultado = cursor.fetchone()
             
-          elif setor1=="ADMINISTRATIVA":
+          elif setor1=="ALMOXARIFADO":
              comando = f"""INSERT INTO nmemodiradm(nome_servidor, assunto) VALUES ('{a0}','{a1}')"""
              cursor.execute(comando)
              connection.commit()
-             comando1 = """SELECT id, nome_servidor, assunto FROM nmemodiradm ORDER BY id DESC"""
+             comando1 = """SELECT id, nome_servidor, assunto FROM nmemoalmox ORDER BY id DESC"""
              cursor.execute(comando1)
              resposta = cursor.fetchall()
              cursor.execute(comando1)
